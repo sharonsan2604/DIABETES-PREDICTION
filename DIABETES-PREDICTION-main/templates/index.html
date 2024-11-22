@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background: url('https://png.pngtree.com/background/20210710/original/pngtree-flat-cartoon-medical-blue-banner-poster-background-picture-image_1040368.jpg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8); /* Add opacity to make it blend with background */
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+        }
+        h1 {
+            color: #4682B4; /* Blue color for heading */
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        .form-group label {
+            color: #4682B4; /* Blue color for labels */
+            display: block; /* Ensure labels are displayed properly */
+            margin-bottom: 10px; /* Add space between labels and inputs */
+            font-size: 18px; /* Increase font size for labels */
+        }
+        .form-control {
+            border-radius: 10px;
+            border: 2px solid #4682B4; /* Blue color for borders */
+            margin-bottom: 20px; /* Add space between input fields */
+        }
+        .btn-primary, .btn-secondary {
+            background-color: #4682B4; /* Blue color for buttons */
+            border: none;
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            display: block; /* Make buttons block-level to center them */
+            margin-bottom: 10px; /* Add margin to separate buttons */
+            font-weight: bold; /* Make buttons bold */
+            color: #fff; /* White text for better contrast */
+        }
+        .btn-primary:hover, .btn-secondary:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Diabetes Prediction System</h1>
+        <form action="/predict" method="post">
+            <div class="form-group">
+                <label for="glucose" style="font-size: 18px;">Glucose Level</label>
+                <input type="number" class="form-control" id="glucose" name="glucose" required>
+            </div>
+            <div class="form-group">
+                <label for="skin_thickness" style="font-size: 18px;">Skin Thickness</label>
+                <input type="number" class="form-control" id="skin_thickness" name="skin_thickness" required>
+            </div>
+            <div class="form-group">
+                <label for="insulin" style="font-size: 18px;">Insulin Level</label>
+                <input type="number" class="form-control" id="insulin" name="insulin" required>
+            </div>
+            <div class="form-group">
+                <label for="age" style="font-size: 18px;">Age</label>
+                <input type="number" class="form-control" id="age" name="age" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Predict</button>
+        </form>
+        <a href="/metrics" class="btn btn-secondary">View Metrics</a>
+    </div>
+</body>
+</html>

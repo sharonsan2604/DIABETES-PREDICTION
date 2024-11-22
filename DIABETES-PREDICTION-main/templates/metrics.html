@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Metrics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background: url('https://png.pngtree.com/background/20210710/original/pngtree-flat-cartoon-medical-blue-banner-poster-background-picture-image_1040368.jpg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8); /* Add opacity to make it blend with background */
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+        }
+        h1 {
+            color: #4682B4; /* Blue color for heading */
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        .metrics-box {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #4682B4; /* Blue color for border */
+            border-radius: 5px;
+            background-color: #ffffff;
+            text-align: left;
+        }
+        pre {
+            white-space: pre-wrap;
+            color: #4682B4; /* Blue color for pre text */
+        }
+        .btn-secondary {
+            background-color: #4682B4; /* Blue color for button */
+            border: none;
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            font-weight: bold; /* Make button bold */
+            color: #fff; /* White text for better contrast */
+        }
+        .btn-secondary:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Model Metrics</h1>
+        <div class="metrics-box">
+            <h3>Accuracy</h3>
+            <p>{{ accuracy }}</p>
+            <h3>Confusion Matrix</h3>
+            <pre>{{ conf_matrix }}</pre>>
+            <a href="/" class="btn btn-secondary">Back to Prediction</a>
+        </div>
+    </div>
+</body>
+</html>
